@@ -1,6 +1,6 @@
-import Email_SMS.EmailNotification;
-import Email_SMS.Notification;
-import Email_SMS.SmsNotification;
+import InterfaceExample.EmailNotification;
+import InterfaceExample.Notification;
+import InterfaceExample.SmsNotification;
 
 void main()
 {

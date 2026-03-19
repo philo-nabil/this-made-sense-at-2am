@@ -1,4 +1,4 @@
-package Email_SMS;
+package InterfaceExample;
 
 public interface Notification {
     void send (String message);
