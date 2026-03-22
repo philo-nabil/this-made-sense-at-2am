@@ -41,12 +41,12 @@ class Circle extends Shape {
 
 ### Interface vs Abstract class — when to use which
 
-| | Interface | Abstract class |
-|---|---|---|
-| Has real method implementations | only `default` methods | yes |
-| Has fields/state | no | yes |
-| A class can use multiple | yes | no (one only) |
-| Use when | defining a contract | sharing common code between related classes |
+|                                 | Interface              | Abstract class                              |
+|---------------------------------|------------------------|---------------------------------------------|
+| Has real method implementations | only `default` methods | yes                                         |
+| Has fields/state                | no                     | yes                                         |
+| A class can use multiple        | yes                    | no (one only)                               |
+| Use when                        | defining a contract    | sharing common code between related classes |
 
 The rule of thumb: **interface** = *can do something*. **Abstract class** = *is a type of something*.
 
