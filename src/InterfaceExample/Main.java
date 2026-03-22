@@ -2,6 +2,7 @@ import InterfaceExample.EmailNotification;
 import InterfaceExample.Notification;
 import InterfaceExample.SmsNotification;
 
+
 void main()
 {
     List<Notification> notifications = new ArrayList<>();
