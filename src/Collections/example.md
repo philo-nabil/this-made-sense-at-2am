@@ -51,3 +51,34 @@ scores.get("Philo");  // 95
 > 3. Build a `Map<String, Integer>` that tracks **how many times each product was ordered**. Print each product and its count.
 
 All three in one `main`. The map part requires a bit of thinking — figure out how to count occurrences.
+
+---
+### Pro tips
+
+**`getOrDefault()`** — a cleaner way to write the count logic:
+```java
+scores.put(parts[1], scores.getOrDefault(parts[1], 0) + 1);
+```
+Gets the current value, or 0 if it doesn't exist yet. Replaces the entire `if/else`. You'll see this pattern constantly in backend code.
+
+**`Map` iteration** — when you need to print key/value pairs properly:
+```java
+for (Map.Entry<String, Integer> entry : scores.entrySet()) {
+    System.out.println(entry.getKey() + " ordered " + entry.getValue() + " times");
+}
+```
+
+---
+
+### Deep dive — why these three matter for backend
+
+In Spring Boot you'll use these everywhere:
+- **`List`** — returning a list of users, orders, products from your API
+- **`Set`** — storing roles/permissions for a user (`ROLE_ADMIN`, `ROLE_USER`) — duplicates make no sense there
+- **`Map`** — caching, grouping results, building response objects dynamically
+
+The `Map` counting pattern you just wrote is also the foundation of a lot of analytics logic — counting events, grouping by category, building histograms.
+
+---
+
+Three topics down. Next is **Exception Handling**. Ready?
