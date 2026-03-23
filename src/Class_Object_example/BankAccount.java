@@ -1,38 +1,40 @@
-public static class BankAccount {
+package Class_Object_example;
+
+public class BankAccount {
     private final String ownerName;
     private double balance;
+
+    public BankAccount(String ownerName, double balance) {
+        this.ownerName = ownerName;
+        this.balance = balance;
+    }
 
     public String getOwnerName() {
         return ownerName;
     }
-    public BankAccount(String owner_name, double balance) {
-        this.ownerName = owner_name;
-        this.balance = balance;
+
+    public double getBalance() {
+        return balance;
     }
 
-    void deposit(double amount){
+    public void deposit(double amount) {
         balance += amount;
     }
-    void withdraw(double amount){
 
-        if(balance < amount){
+    public void withdraw(double amount) {
+        if (balance < amount) {
             System.out.println("Insufficient Funds");
-
-        }
-        else{
-            balance-= amount;
+        } else {
+            balance -= amount;
         }
     }
-    void showBalance(){
-        System.out.println("Balance" + balance);
+
+    public void showBalance() {
+        System.out.println("Balance: " + balance);
     }
-}
 
-void main() {
-    BankAccount test1 = new BankAccount("philo", 1000);
-    test1.deposit(1000);
-    test1.withdraw(10000);
-    test1.deposit(200);
-    test1.withdraw(500);
-
+    @Override
+    public String toString() {
+        return "BankAccount{ownerName='" + ownerName + "', balance=" + balance + "}";
+    }
 }
